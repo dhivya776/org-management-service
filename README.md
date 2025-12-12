@@ -2,13 +2,13 @@
 
 A backend service built with **FastAPI** and **MongoDB** that supports a multi-tenant architecture. This system allows for creating organizations, managing admin authentication, and handling dynamic data isolation using separate collections per tenant.
 
-## 🛠️ Tech Stack
+## Tech Stack
 * **Language:** Python 3.10+
 * **Framework:** FastAPI
 * **Database:** MongoDB (Motor Async Driver)
 * **Authentication:** JWT (JSON Web Tokens) & Bcrypt hashing
 
-## 🚀 How to Run
+## How to Run
 
 1.  **Clone the repository:**
     ```bash
@@ -47,7 +47,7 @@ A backend service built with **FastAPI** and **MongoDB** that supports a multi-t
 6.  **Access API Documentation:**
     Open your browser to: `http://127.0.0.1:8000/docs`
 
-## 🏗️ Architecture & Design Choices
+## Architecture & Design Choices
 
 ### **Multi-Tenancy Strategy**
 I chose a **Collection-Based Isolation** strategy.
@@ -59,7 +59,7 @@ I chose a **Collection-Based Isolation** strategy.
     * **Simplicity:** Queries do not need complex filtering by `tenant_id`.
 * **Cons:** * **Scalability:** MongoDB has a limit on the number of namespaces. Scaling to 10,000+ organizations might degrade performance compared to a "Shared Collection" approach (Row-Level Isolation).
 
-## 🔌 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
